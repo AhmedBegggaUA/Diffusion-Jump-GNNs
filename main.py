@@ -2,9 +2,13 @@ import argparse
 import os
 import torch
 import numpy as np
+import seaborn as sns
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+import pickle
 from torch_geometric.datasets import Planetoid,WebKB,Actor,WikipediaNetwork, LINKXDataset
 from torch_geometric.utils import to_dense_adj
-from models import ODwire_unsupervised, ODwire_supervised, ODwire, VanillaGCN
+from models import *
 from utils import *
 import warnings
 warnings.filterwarnings("ignore")
@@ -116,12 +120,13 @@ for i in range(10):
     print('===========================================================================================================')
     print('Split: ',i)
     print('===========================================================================================================')
-    model = ODwire(in_channels=dataset.num_features,
+    model = DJ(in_channels=dataset.num_features,
                                 hidden_channels=args.hidden_channels,
                                 num_centers=args.num_centers,
                                 adj_dim = adj.shape[0],
-                                n_layers=args.n_layers,
-                                out_channels=dataset.num_classes).to(device)
+                                n_jumps=args.n_layers,
+                                out_channels=dataset.num_classes,
+                                drop_out = args.dropout).to(device)
     criterion = torch.nn.NLLLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.wd)
     test_acc = 0
@@ -141,3 +146,4 @@ print('=========================================================================
 print('Report: ',np.mean(results)*100,'+-',np.std(results)*100)
 print('===========================================================================================================')
 print(' Configuration: ',args)
+print('===========================================================================================================')
