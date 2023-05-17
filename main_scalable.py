@@ -33,9 +33,6 @@ parser.add_argument(
     help="You can choose between cuda:0, cuda:1, cpu",
 )
 parser.add_argument(
-        "--temperature", type=float, default=1, help="Temperature for the kernel"
-    )
-parser.add_argument(
         "--hidden_channels", type=int, default=16, help="Hidden channels for the unsupervised model"
 )
 parser.add_argument(
