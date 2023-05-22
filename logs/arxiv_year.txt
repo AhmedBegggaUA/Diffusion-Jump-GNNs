@@ -3548,5 +3548,5 @@ Test Accuracy:  0.49211073318216175
 ===========================================================================================================
 Report:  49.343348450491305 +- 0.19398218074357734
 ===========================================================================================================
- Configuration:  Namespace(dataset='arxiv-year', cuda='cuda:0', temperature=1, hidden_channels=128, hidden_channels_unsupervised=16, lr_unsupervised=0.03, wd_unsupervised=0, dropout=0.2, lr=0.003, wd=0.0005, epochs_unsupervised=100, epochs=700, unsupervised_mode=False, n_layers=5, num_centers=3, log_file='logs/arxiv-year_batch_results.csv')
+ Configuration:  Namespace(dataset='arxiv-year', cuda='cuda:0', temperature=1, hidden_channels=128, hidden_channels_unsupervised=16, lr_unsupervised=0.03, wd_unsupervised=0, dropout=0.2, lr=0.003, wd=0.0005, epochs_unsupervised=100, epochs=700, unsupervised_mode=False, n_layers=3, num_centers=3, log_file='logs/arxiv-year_batch_results.csv')
 ===========================================================================================================

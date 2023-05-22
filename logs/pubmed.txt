@@ -2082,4 +2082,4 @@ Test Accuracy:  0.893762677484787
 ===========================================================================================================
 Report:  89.19371196754564 +- 0.32781534196539475
 ===========================================================================================================
- Configuration:  Namespace(dataset='pubmed', cuda='cuda:0', hidden_channels=128, dropout=0.3, lr=0.01, wd=0.0005, epochs=200, n_layers=8, num_centers=3)
+ Configuration:  Namespace(dataset='pubmed', cuda='cuda:0', hidden_channels=128, dropout=0.3, lr=0.01, wd=0.0005, epochs=200, n_layers=3, num_centers=3)

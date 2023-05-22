@@ -10,13 +10,13 @@ conda create --name <env> --file requirements.txt
 or
 
 ```
-conda env create -f environment_experiments.yml
+conda env create -f conda_graphy_environment.yml
 conda activate DiffWire
 ```
 ## Code organization
 ## Run experiments
 ```python
-python train.py --dataset REDDIT-BINARY --model CTNet --cuda cuda:0
-python train.py --dataset REDDIT-BINARY --model GAPNet --derivative laplacian --cuda cuda:0
-python train.py --dataset REDDIT-BINARY --model GAPNet --derivative normalizeed --cuda cuda:0
+python main.py --dataset texas --hidden_channels 64 --dropout 0.2 --lr 0.03 --n_layers 20 --epochs 700 --cuda cpu
+python main.py --dataset wisconsin --hidden_channels 64 --dropout 0.5 --lr 0.03 --n_layers 5 --epochs 700 --cuda cpu
+python main.py --dataset cornell --hidden_channels 128 --dropout 0.5 --lr 0.03 --n_layers 5 --wd 0.001 --epochs 700 --cuda cpu
 ```
