@@ -11,7 +11,7 @@ or
 
 ```
 conda env create -f conda_graphy_environment.yml
-conda activate DiffWire
+conda activate graphy
 ```
 ## Code organization
 ## Run experiments
